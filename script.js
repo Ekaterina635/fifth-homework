@@ -2,7 +2,7 @@
 let number=-1
 if (number > 0) {
     console.log('положительное');
-} else if (number < -0) {
+} else if (number < 0) {
     console.log('отрицательное');
 } 
  else {
@@ -12,17 +12,18 @@ if (number > 0) {
 //2 задание
 let high=1.8
 let weight=75
-if ((weight/high**2) >= 40) {
+const IMT=weight/high**2
+if (IMT >= 40) {
     console.log('Ожирение 3 степени')
-} else if ((weight/high**2) >= 35) {
+} else if (IMT >= 35) {
     console.log('Ожирение 2 степени')
-} else if ((weight/high**2) >= 30) {
+} else if (IMT >= 30) {
     console.log('Ожирение 1 степени')
-} else if ((weight/high**2) >= 25)   { 
+} else if (IMT >= 25)   { 
     console.log('Избыточная масса тела')
-} else if ((weight/high**2) >= 18.5) {
+} else if (IMT >= 18.5) {
     console.log('Нормальная масса тела')
-} else if ((weight/high**2) < 18.5) {
+} else if (IMT < 18.5) {
     console.log('Недостаточная масса тела')
 } else {
     console.log('не определено')
@@ -91,7 +92,7 @@ switch (menu) {
         foodType = 'Второе блюдо/главное';
         break;
     case 4:
-        foodType = 'Дессерт';
+        foodType = 'Десерт';
         break;
     case 5:
         foodType = 'Напиток';
@@ -99,5 +100,6 @@ switch (menu) {
     default:
         foodType = 'Такого блюда не обнаружено';
 }
+
 
 console.log(foodType);
